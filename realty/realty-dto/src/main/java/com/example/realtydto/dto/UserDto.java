@@ -22,8 +22,6 @@ public class UserDto  {
 
     private Integer id;
 
-
-
     private String userName;
 
     private String firstName;
