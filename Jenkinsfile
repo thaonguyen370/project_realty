@@ -1,16 +1,17 @@
-
-
 pipeline {
-    agent none
+agent {
+    docker {
+        image 'kristianfoss/openjdk-maven-node:latest'
+        args '-u root'
+    }
+}
     stages {
-        stage ('Example') {
+        stage('Build') {
             steps {
-            echo 'haha'
-                // log.info 'Starting'
-//                 script {
-//                     log.info 'Starting'
-//                     log.warning 'Nothing to do!'
-//                 }
+                sh 'java -version'
+                sh 'mvn -version'
+                // Add your Maven build steps here
+                sh 'mvn clean install -DSkiptests'
             }
         }
     }
