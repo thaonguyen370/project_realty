@@ -1,14 +1,16 @@
+@Library('utils') _
+
 pipeline {
+    agent none
     stages {
-        stage ('test') {
+        stage ('Example') {
             steps {
-              echo 'test'
+                // log.info 'Starting'
+                script {
+                    log.info 'Starting'
+                    log.warning 'Nothing to do!'
+                }
             }
-        },
-        stage ('test1') {
-             steps {
-                cho 'test1'
-             }
         }
     }
 }
