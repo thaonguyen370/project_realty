@@ -5,11 +5,12 @@ pipeline {
     stages {
         stage ('Example') {
             steps {
+            echo 'haha'
                 // log.info 'Starting'
-                script {
-                    log.info 'Starting'
-                    log.warning 'Nothing to do!'
-                }
+//                 script {
+//                     log.info 'Starting'
+//                     log.warning 'Nothing to do!'
+//                 }
             }
         }
     }
