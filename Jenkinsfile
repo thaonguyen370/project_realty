@@ -1,12 +1,7 @@
 pipeline {
-agent {
-    docker {
-        image 'kristianfoss/openjdk-maven-node:latest'
-        args '-u root'
-    }
-}
+    agent none
     stages {
-        stage('Build') {
+         stage('Build') {
             steps {
                 sh 'java -version'
                 sh 'mvn -version'
